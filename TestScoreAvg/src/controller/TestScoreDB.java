@@ -20,7 +20,7 @@ public class TestScoreDB {
 			trans.commit();
 		}catch(Exception e){
 			System.out.println(e);
-			trans.rollback();
+			//trans.rollback();
 		}finally{
 			em.close();
 		}		

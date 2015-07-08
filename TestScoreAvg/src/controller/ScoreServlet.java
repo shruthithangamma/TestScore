@@ -60,8 +60,8 @@ public class ScoreServlet extends HttpServlet {
 		if(action.contentEquals("add")){
 			
 			TestScoreDB.insert(scr);
-			 response.sendRedirect(response.encodeRedirectURL(
-			            "/TestScoreAvg/index.jsp"));
+			getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+			 
 		}
 	}
 
